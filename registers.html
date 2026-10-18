@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>TravelVista - Register</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body bgcolor = "pink">
+
+    <header>
+        <h1>Join TravelVista</h1>
+        <p>Register to plan your next adventure.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="media.html">Destinations and Media</a>
+        <a href="register.html">Register</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h2>Traveller Registration Form</h2>
+        <p>Tell us a little about yourself and your travel plans.</p>
+
+        <form action="#" method="get">
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname"
+                   required minlength="3" maxlength="40">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   required minlength="8">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="traveldate">Preferred Travel Date:</label>
+            <input type="date" id="traveldate" name="traveldate" required>
+
+            <label for="website">Travel Inspiration Website:</label>
+            <input type="url" id="website" name="website">
+
+            <label for="budget">Travel Budget (PKR):</label>
+            <input type="number" id="budget" name="budget"
+                   min="1000" max="1000000" required>
+
+            <label for="departure">Preferred Departure Time:</label>
+            <input type="time" id="departure" name="departure">
+
+            <label for="interest">Adventure Interest Level:</label>
+            <input type="range" id="interest" name="interest"
+                   min="1" max="10">
+
+            <label for="color">Favourite Travel Colour:</label>
+            <input type="color" id="color" name="color">
+
+            <label for="destination">Preferred Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="">Choose a destination</option>
+                <option value="hunza">Hunza Valley</option>
+                <option value="murree">Murree</option>
+                <option value="karachi">Karachi</option>
+            </select>
+
+            <p>Travel Style:</p>
+            <label>
+                <input type="radio" name="style" value="adventure" required>
+                Adventure
+            </label>
+
+            <label>
+                <input type="radio" name="style" value="relaxation">
+                Relaxation
+            </label>
+
+            <p>What would you like to include?</p>
+            <label>
+                <input type="checkbox" name="activities" value="sightseeing">
+                Sightseeing
+            </label>
+
+            <label>
+                <input type="checkbox" name="activities" value="food">
+                Local food
+            </label>
+
+            <label for="message">Additional Information:</label>
+            <textarea id="message" name="message"
+                      rows="4" maxlength="300"></textarea>
+
+            <label for="document">Upload a Travel Document (practice field):</label>
+            <input type="file" id="document" name="document">
+
+            <label for="country">Website Theme:</label>
+            <input type="text" id="country" value="TravelVista"
+                   readonly>
+
+            <label for="status">Registration Status:</label>
+            <input type="text" id="status" value="Available soon"
+                   disabled>
+
+            <label>
+                <input type="checkbox" name="agreement" required>
+                I agree to the registration terms.
+            </label>
+
+            <button type="submit">Register Now</button>
+            <button type="reset">Clear Form</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>Copyright 2026 TravelVista</p>
+    </footer>
+
+</body>
+</html>
