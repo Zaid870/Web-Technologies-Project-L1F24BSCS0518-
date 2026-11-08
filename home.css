@@ -1,0 +1,1142 @@
+/* ==========================================
+   1. GLOBAL STYLING
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* Skip Link */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    background: #00adb5;
+    color: white;
+    padding: 10px 18px;
+    z-index: 2000;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+
+/* ==========================================
+   2. HEADER & NAVIGATION
+========================================== */
+
+.site-header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 18px 35px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.nav-links a {
+    color: #b0bec5;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 12px;
+    border-radius: 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    background-color: #00adb5;
+    transform: translateY(-2px);
+}
+
+.nav-links a.active {
+    color: #ffcc00;
+    background-color: rgba(0, 173, 181, 0.15);
+    position: relative;
+    animation: pulseGlow 1.5s infinite alternate;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    bottom: 3px;
+    left: 15%;
+    background-color: #ffcc00;
+    animation: slideIn 0.5s ease;
+}
+
+
+/* Theme Toggle Button */
+
+.btn-toggle {
+    background-color: #2c5364;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 9px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn-toggle:hover {
+    background-color: #00e5ff;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   3. HERO SECTION
+========================================== */
+
+.hero-section {
+    min-height: 650px;
+
+    background:
+        linear-gradient(rgba(15, 32, 39, 0.78),
+            rgba(44, 83, 100, 0.75)),
+        url('../images/travel-banner.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 25px;
+    text-align: center;
+    color: #ffffff;
+
+    border-bottom: 5px solid #00adb5;
+
+    animation: fadeInHero 1.2s ease-in-out;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-label {
+    display: inline-block;
+    color: #00e5ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.25;
+    font-weight: 800;
+    margin-bottom: 22px;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h1 span {
+    color: #00e5ff;
+}
+
+.hero-content p {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    font-size: 17px;
+    color: #e0e0e0;
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background-color: #00adb5;
+    color: #ffffff;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 6px 20px rgba(0, 173, 181, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00818a;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 129, 138, 0.5);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background-color: #ffffff;
+    color: #203a43;
+}
+
+
+/* Hero Statistics */
+
+.hero-info {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    margin-top: 55px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item strong {
+    color: #00e5ff;
+    font-size: 27px;
+}
+
+.info-item span {
+    font-size: 13px;
+    color: #e0e0e0;
+}
+
+
+/* ==========================================
+   4. COMMON SECTION HEADINGS
+========================================== */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-label {
+    display: inline-block;
+    color: #00adb5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: #2c5364;
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #666666;
+    font-size: 15px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   5. ABOUT AGENCY SECTION
+========================================== */
+
+.about-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 30px 25px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    color: #2c5364;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.about-features {
+    margin: 20px 0 28px;
+}
+
+.about-features li {
+    color: #34495e;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================
+   6. IMAGE SLIDER SECTION
+========================================== */
+
+.gallery-section {
+    padding: 75px 20px;
+    background: linear-gradient(135deg, #eef2f3, #e8f4f8);
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    height: 430px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.sliderTrack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+
+/* ==========================================
+   7. WHY CHOOSE US SECTION
+========================================== */
+
+.highlights {
+    padding: 85px 25px;
+    text-align: center;
+    background-color: #f4f7f6;
+}
+
+.features-grid {
+    max-width: 1200px;
+    margin: 45px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    padding: 35px 22px;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 173, 181, 0.15);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #e0f7f8;
+    border-radius: 50%;
+
+    font-size: 32px;
+}
+
+.feature-card h3 {
+    color: #2c5364;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #666666;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   8. FEATURED DESTINATIONS
+========================================== */
+
+.featured-section {
+    padding: 85px 25px;
+    background-color: #ffffff;
+}
+
+.featured-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.featured-card {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+
+.featured-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-card:hover img {
+    transform: scale(1.1);
+}
+
+.featured-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 30px 20px 22px;
+
+    background: linear-gradient(transparent,
+            rgba(0, 0, 0, 0.9));
+
+    color: #ffffff;
+}
+
+.featured-content h3 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.featured-content p {
+    font-size: 13px;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+}
+
+.featured-content a {
+    display: inline-block;
+    color: #00e5ff;
+    font-size: 13px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.featured-content a:hover {
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   9. CALL TO ACTION SECTION
+========================================== */
+
+.travel-cta {
+    padding: 85px 20px;
+    text-align: center;
+
+    background: linear-gradient(135deg,
+            #0f2027,
+            #203a43,
+            #2c5364);
+
+    color: #ffffff;
+}
+
+.cta-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 10px 0 15px;
+}
+
+.cta-content p {
+    color: #cfd8dc;
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #00adb5;
+    color: #ffffff;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #ffffff;
+    color: #00818a;
+    transform: translateY(-4px);
+}
+
+
+/* ==========================================
+   10. NEWSLETTER SECTION
+========================================== */
+
+.newsletter-section {
+    padding: 75px 20px;
+    background-color: #eaf2f3;
+    text-align: center;
+}
+
+.newsletter-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.newsletter-content h2 {
+    color: #2c5364;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.newsletter-content p {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.newsletter-form label {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #34495e;
+}
+
+.newsletter-input {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 18px;
+    border: 1px solid #cccccc;
+    border-radius: 30px;
+    outline: none;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-input input:focus {
+    border-color: #00adb5;
+}
+
+.newsletter-input button {
+    padding: 13px 25px;
+    background-color: #00adb5;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input button:hover {
+    background-color: #00818a;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   11. FOOTER
+========================================== */
+
+.site-footer {
+    background: linear-gradient(135deg, #0f2027, #203a43);
+    color: #ffffff;
+    padding: 55px 30px 20px;
+}
+
+.footer-content {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1fr;
+    gap: 40px;
+}
+
+.footer-brand h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #b0bec5;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 320px;
+}
+
+.footer-content h3 {
+    color: #00adb5;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a,
+.footer-social a {
+    display: block;
+    color: #b0bec5;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: #00e5ff;
+    transform: translateX(4px);
+}
+
+.footer-contact p {
+    color: #b0bec5;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-bottom {
+    max-width: 1250px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #34474e;
+    text-align: center;
+    color: #b0bec5;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   12. NIGHT MODE
+========================================== */
+
+body.night-mode {
+    background-color: #121820;
+    color: #e0e0e0;
+}
+
+body.night-mode .about-section {
+    color: #e0e0e0;
+}
+
+body.night-mode .about-text h3,
+body.night-mode .section-heading h2 {
+    color: #00e5ff;
+}
+
+body.night-mode .about-text p,
+body.night-mode .about-features li,
+body.night-mode .section-heading p {
+    color: #b0bec5;
+}
+
+body.night-mode .gallery-section {
+    background: #1a252e;
+}
+
+body.night-mode .highlights {
+    background-color: #121820;
+}
+
+body.night-mode .feature-card {
+    background-color: #1e2932;
+    border-color: #34474e;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.night-mode .feature-card h3 {
+    color: #00e5ff;
+}
+
+body.night-mode .feature-card p {
+    color: #b0bec5;
+}
+
+body.night-mode .feature-icon {
+    background-color: #263b43;
+}
+
+body.night-mode .featured-section {
+    background-color: #18232c;
+}
+
+body.night-mode .travel-cta {
+    background: linear-gradient(135deg, #080f14, #172b35);
+}
+
+body.night-mode .newsletter-section {
+    background-color: #1e2932;
+}
+
+body.night-mode .newsletter-content h2 {
+    color: #00e5ff;
+}
+
+body.night-mode .newsletter-content p {
+    color: #b0bec5;
+}
+
+body.night-mode .newsletter-form label {
+    color: #e0e0e0;
+}
+
+body.night-mode .newsletter-input input {
+    background-color: #2c3640;
+    border-color: #444444;
+    color: #ffffff;
+}
+
+body.night-mode .newsletter-input input::placeholder {
+    color: #b0bec5;
+}
+
+body.night-mode .btn-toggle {
+    background-color: #00adb5;
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   13. ANIMATIONS
+========================================== */
+
+@keyframes fadeInHero {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes pulseGlow {
+
+    from {
+        text-shadow: 0 0 5px rgba(255, 204, 0, 0.4);
+    }
+
+    to {
+        text-shadow: 0 0 15px rgba(255, 204, 0, 0.9);
+    }
+
+}
+
+@keyframes slideIn {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 70%;
+    }
+
+}
+
+
+/* ==========================================
+   14. TABLET RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1050px) {
+
+    .site-header {
+        padding: 15px 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+}
+
+
+/* ==========================================
+   15. MOBILE RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 650px) {
+
+    .site-header {
+        padding: 15px 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo a {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+        padding: 7px 8px;
+    }
+
+    .btn-toggle {
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        min-height: 570px;
+        padding: 60px 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-info {
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .info-item strong {
+        font-size: 22px;
+    }
+
+    .info-item span {
+        font-size: 11px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+
+    /* About */
+
+    .about-section {
+        margin: 45px auto;
+        padding: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-text {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 270px;
+    }
+
+    .about-text h3 {
+        font-size: 23px;
+    }
+
+
+    /* Slider */
+
+    .gallery-section {
+        padding: 55px 15px;
+    }
+
+    .slider-container {
+        height: 260px;
+    }
+
+
+    /* Features */
+
+    .highlights {
+        padding: 55px 15px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+
+
+    /* Destinations */
+
+    .featured-section {
+        padding: 55px 15px;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .featured-card {
+        height: 300px;
+    }
+
+
+    /* CTA */
+
+    .travel-cta {
+        padding: 60px 18px;
+    }
+
+
+    /* Newsletter */
+
+    .newsletter-section {
+        padding: 55px 18px;
+    }
+
+    .newsletter-content h2 {
+        font-size: 24px;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
+    }
+
+    .newsletter-input input,
+    .newsletter-input button {
+        width: 100%;
+    }
+
+
+    /* Footer */
+
+    .site-footer {
+        padding: 40px 22px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+
+
+/* ==========================================
+   16. ACCESSIBILITY
+========================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #00adb5;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
