@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Vista - Contact Us</title>
+    <!-- Linking page specific stylesheet -->
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Common Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="home.html">✈️ Travel Vista</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="media.html">Media &amp; Tours</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="register.html">Book Tour</a></li>
+                <li>
+                    <a href="contact.html" class="active" aria-current="page">Contact Us</a>
+                </li>
+            </ul>
+            <button id="theme-toggle-btn" class="btn-toggle">🌙 Switch to Night Mode</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="contact-container">
+            <h1>Get In Touch With Us</h1>
+            <p>Have questions about our tour packages? Send us a message below or toggle night-mode for comfortable
+                browsing.</p>
+
+            <div class="contact-grid">
+
+                <!-- Contact Info Box (Left Side) -->
+                <div class="contact-info">
+
+                    <h3>Agency Headquarters</h3>
+
+                    <p class="contact-intro">
+                        We are here to make your travel dreams come true.
+                        Contact our team for bookings, travel information,
+                        and personalized assistance.
+                    </p>
+
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p>24 Mall Road, Gulberg III, Lahore, Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>whitewolves3566@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>+92 300 6653460</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">🕒</span>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Monday - Saturday</p>
+                            <p>9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="why-choose">
+                        <h4>Why Choose Travel Vista?</h4>
+                        <ul>
+                            <li>✈️ Customized Travel Packages</li>
+                            <li>🌍 Exciting International Destinations</li>
+                            <li>🤝 Friendly Customer Support</li>
+                        </ul>
+                    </div>
+
+                    <div class="social-links">
+
+                        <a href="https://www.facebook.com/yourpage" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/yourusername" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://wa.me/923001234567" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Contact Form Box (Right Side) -->
+                <div class="contact-form-wrapper">
+                    <h3>Send Us a Message</h3>
+                    <form action="https://formspree.io/f/mljjpvdn" method="POST">
+
+                        <input type="hidden" name="_subject" value="New Travel Vista Contact Message">
+
+                        <input type="text" name="_gotcha" style="display:none">
+
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user-email">Your Email:</label>
+                            <input type="email" id="user-email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Send Message</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Travel Vista Agency. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Theme Toggle File -->
+    <script src="js/theme.js"></script>
+</body>
+
+</html>
